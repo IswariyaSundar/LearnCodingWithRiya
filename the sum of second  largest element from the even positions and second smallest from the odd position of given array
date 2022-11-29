@@ -1,0 +1,39 @@
+//the sum of second  largest element from the even positions and second smallest from the odd position of given array
+
+//Solution in JAVA 
+
+import java.util.*;
+public class Solution 
+{
+    public static int largeSmallSum (int[]arr) 
+    {
+      ArrayList <Integer> odd = new ArrayList <Integer>();
+      ArrayList <Integer> even = new ArrayList <Integer>();
+      //even.add(arr[0]);
+      for(int i=0;i<=arr.length-1;i++){
+          if(i%2==0){
+              even.add(arr[i]);
+          }
+          else{
+              odd.add(arr[i]);
+          }
+      }
+      Collections.sort(odd);
+      Collections.sort(even);
+      int ans = even.get(even.size()-2 )+ odd.get(1);
+      return ans;
+
+    }
+ 
+    public static void main (String[]args) 
+    {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt ();
+        int arr[] = new int[n]; 
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt ();
+
+        System.out.println (largeSmallSum (arr));
+    } 
+}
+
