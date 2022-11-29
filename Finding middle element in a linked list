@@ -1,0 +1,18 @@
+//Finding middle element in a linked list
+
+//Solution in JAVA 
+//Given a singly linked list of N nodes.
+The task is to find the middle of the linked list
+class Solution {
+    public ListNode middleNode(ListNode head) {
+          ListNode slow = head;
+        ListNode fast = head;
+        while(fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //System.outprintln(slow.data);
+        return slow;
+        
+    }
+}
