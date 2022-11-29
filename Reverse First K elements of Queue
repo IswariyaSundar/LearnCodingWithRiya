@@ -1,0 +1,27 @@
+//Solution in c++
+//Given an integer K and a queue of integers, we need to reverse the order of the first K elements of the queue, leaving the other elements in the same relative order.
+
+queue<int> modifyQueue(queue<int> q, int k) {
+    // add code here.
+      stack <int> stk;
+      int o = q.size();
+        for(int i=0;i<k;i++){
+            stk.push(q.front());
+            q.pop();
+            
+        }
+        queue <int> qq;
+        for(int j=0;j<k;j++){
+            qq.push(stk.top());
+            stk.pop();
+        }
+        for(int kk=0;kk<o-k;kk++){
+            qq.push(q.front());
+            q.pop();
+        }
+        
+        return qq;
+    
+    
+    
+}
