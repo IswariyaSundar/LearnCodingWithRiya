@@ -1,0 +1,24 @@
+//GAP SUM
+//SOLUTION IN JAVA
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      int arr[]= {1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9};
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the gap no:");
+      int gap = sc.nextInt();
+      for(int i =0;i<gap;i++){
+                int sum =0;
+            for(int j=i;j<arr.length;j=j+gap){
+              sum = sum+arr[j];
+             }                            
+      System.out.println(sum);
+    }
+      
+    }
+}
+/*sample output
+Enter the gap no:
+2
+25
+20*/
