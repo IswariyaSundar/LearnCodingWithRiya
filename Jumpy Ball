@@ -1,0 +1,21 @@
+//Jumpy Ball
+//You have a jumpy ball. You throw it up from the ground up to a height of H. The ball is jumpy, so when it comes back to the ground, it 
+/rebounds and goes up again to a distance of floor(H/2).
+//This keeps on repeating until it can't rebound anymore. You need to find the total distance traveled by the ball.
+//Solution in JAVA
+
+class Solution{
+    static long jumpyBall(long N){
+        // code here
+        long distance = 2*N;
+        long c;
+        while(N>0){
+            c = N/2;
+            distance += 2*c;
+            N = N/2;
+            
+        }
+        return  distance;
+
+    }
+}
